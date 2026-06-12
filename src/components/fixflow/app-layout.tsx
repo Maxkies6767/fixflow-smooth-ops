@@ -56,9 +56,9 @@ export function AppLayout({ children }: { children: ReactNode }) {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground">
       {/* Desktop sidebar */}
-      <aside className="hidden lg:flex fixed inset-y-0 left-0 w-60 flex-col border-r border-border bg-card px-4 py-6 z-30">
+      <aside className="hidden lg:flex fixed inset-y-0 left-0 w-60 flex-col glass-bar border-r px-4 py-6 z-30">
         <Link to="/dashboard" className="flex items-center gap-2 px-2 mb-8">
           <div className="size-9 rounded-lg bg-brand grid place-items-center text-brand-foreground font-bold">F</div>
           <div className="flex flex-col leading-none">
@@ -134,7 +134,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
 
       {/* Mobile top bar — user + settings + logout, persistent on every page */}
       <div
-        className="lg:hidden fixed inset-x-0 top-0 z-40 bg-card/95 backdrop-blur-xl border-b border-border"
+        className="lg:hidden fixed inset-x-0 top-0 z-40 glass-bar border-b"
         style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
         <div className="flex items-center gap-2 px-3 h-11">
@@ -182,7 +182,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
 
 
       {/* Mobile bottom nav */}
-      <nav className="lg:hidden fixed inset-x-0 bottom-0 bg-card/95 backdrop-blur-xl border-t border-border z-50 px-4 pt-2 pb-[max(env(safe-area-inset-bottom),1.5rem)]">
+      <nav className="lg:hidden fixed inset-x-0 bottom-0 glass-bar border-t z-50 px-4 pt-2 pb-[max(env(safe-area-inset-bottom),1.5rem)]">
         <div className="max-w-md mx-auto flex items-center justify-between">
           {mobileTabs.slice(0, 2).map((item) => (
             <BottomTab key={item.to} {...item} active={isActive(item.to)} />
