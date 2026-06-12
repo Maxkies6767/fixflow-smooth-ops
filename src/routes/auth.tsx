@@ -53,17 +53,17 @@ function AuthPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background grid place-items-center px-4 py-8">
+    <div className="min-h-screen grid place-items-center px-4 py-8">
       <div className="w-full max-w-sm">
         <div className="flex items-center gap-2.5 justify-center mb-8">
-          <div className="size-11 rounded-xl bg-brand grid place-items-center text-brand-foreground font-bold text-lg">F</div>
+          <div className="size-11 rounded-2xl bg-brand grid place-items-center text-brand-foreground font-bold text-lg shadow-lg shadow-brand/30">F</div>
           <div className="flex flex-col leading-none">
             <span className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">Operations</span>
             <span className="text-lg font-semibold tracking-tight">FIXFLOW</span>
           </div>
         </div>
 
-        <div className="bg-card ring-1 ring-border rounded-2xl p-6">
+        <div className="glass rounded-3xl p-6">
           <h1 className="text-lg font-semibold tracking-tight">เข้าสู่ระบบ</h1>
           <p className="text-xs text-muted-foreground mt-1">
             ใช้ชื่อผู้ใช้และรหัสผ่านที่เจ้าของร้านสร้างให้
