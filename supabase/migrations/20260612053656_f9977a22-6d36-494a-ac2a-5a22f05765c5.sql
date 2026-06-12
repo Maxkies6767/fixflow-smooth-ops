@@ -1,0 +1,1 @@
+GRANT EXECUTE ON FUNCTION public.get_repair_by_tracking_code(text) TO anon, authenticated;
