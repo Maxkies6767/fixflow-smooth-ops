@@ -6,6 +6,7 @@ import { useAuth, signOut } from "@/hooks/use-auth";
 import { useQueryClient } from "@tanstack/react-query";
 import { useEffect, type ReactNode } from "react";
 import { logActivity, setActivityActor } from "@/mocks/activity-log-store";
+import { ThemeToggle } from "./theme-toggle";
 
 const NAV = [
   { to: "/dashboard", label: "หน้าหลัก", icon: LayoutDashboard, ownerOnly: false },
@@ -115,6 +116,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
               <p className="text-sm font-medium truncate">{displayName ?? user?.email ?? "ผู้ใช้งาน"}</p>
               <p className="text-[11px] text-muted-foreground uppercase">{role ?? "—"}</p>
             </div>
+            <ThemeToggle compact />
             <button
               type="button"
               onClick={handleLogout}
@@ -145,6 +147,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
             <span className="text-[12px] font-semibold truncate">{displayName ?? user?.email ?? "ผู้ใช้"}</span>
             <span className="text-[9px] uppercase tracking-wider text-muted-foreground">{role ?? "—"}</span>
           </div>
+          <ThemeToggle compact />
           {isOwner && (
             <Link
               to="/settings"
