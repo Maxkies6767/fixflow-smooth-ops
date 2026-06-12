@@ -91,8 +91,7 @@ export const createTechnician = createServerFn({ method: "POST" })
     if (created.user) {
       await supabaseAdmin
         .from("profiles")
-        .update({ display_name: data.displayName.trim(), contact_email: contactEmail })
-        .eq("id", created.user.id);
+        .upsert({ id: created.user.id, display_name: data.displayName.trim(), contact_email: contactEmail });
       // Override default role from trigger if requested
       await supabaseAdmin.from("user_roles").delete().eq("user_id", created.user.id);
       await supabaseAdmin
