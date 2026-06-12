@@ -5,6 +5,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { toast } from "sonner";
 import { Loader2, LogIn } from "lucide-react";
 import { logActivity } from "@/mocks/activity-log-store";
+import { ThemeToggle } from "@/components/fixflow/theme-toggle";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
@@ -54,6 +55,7 @@ function AuthPage() {
 
   return (
     <div className="min-h-screen grid place-items-center px-4 py-8">
+      <div className="fixed top-4 right-4 z-10"><ThemeToggle /></div>
       <div className="w-full max-w-sm">
         <div className="flex items-center gap-2.5 justify-center mb-8">
           <div className="size-11 rounded-2xl bg-brand grid place-items-center text-brand-foreground font-bold text-lg shadow-lg shadow-brand/30">F</div>
