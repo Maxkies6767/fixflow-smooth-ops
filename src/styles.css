@@ -206,10 +206,7 @@
 @utility card-elevated {
   box-shadow: var(--shadow-sm);
   transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease;
-}
-
-@utility card-elevated:hover {
-  box-shadow: var(--shadow-md);
+  &:hover { box-shadow: var(--shadow-md); }
 }
 
 @media print {
