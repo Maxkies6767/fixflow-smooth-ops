@@ -61,10 +61,10 @@ export function AppLayout({ children }: { children: ReactNode }) {
       {/* Desktop sidebar */}
       <aside className="hidden lg:flex fixed inset-y-0 left-0 w-60 flex-col glass-bar border-r px-4 py-6 z-30">
         <Link to="/dashboard" className="flex items-center gap-2 px-2 mb-8">
-          <div className="size-9 rounded-lg bg-brand grid place-items-center text-brand-foreground font-bold">F</div>
+          <div className="size-9 rounded-xl bg-brand grid place-items-center text-brand-foreground font-display text-lg font-semibold shadow-sm">F</div>
           <div className="flex flex-col leading-none">
-            <span className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground">Operations</span>
-            <span className="text-base font-semibold tracking-tight">FIXFLOW</span>
+            <span className="text-[9px] font-medium uppercase tracking-[0.2em] text-muted-foreground">Operations</span>
+            <span className="font-display text-lg font-semibold tracking-tight leading-none mt-0.5">Fixflow</span>
           </div>
         </Link>
 
